@@ -1,0 +1,173 @@
+$h1: #00b7c4;
+$base-color: rgba(0, 0, 0, .6);
+
+body {
+    width: 90%;
+    height: 100vh;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        padding-top: 36px;
+
+        h1 {
+            display: flex;
+            align-items: center;
+
+            color: $h1;
+
+            span {
+
+                margin-right: 12px;
+            
+                background: url('../assets/ico/phone-title.svg') no-repeat;
+            
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        a {
+            width: 100px;
+            height: 28px;
+
+            span {
+
+                background-color: rgba(0, 0, 0, 0.2);
+            
+                width: 28px;
+                height: 28px;
+            
+                border-radius: 4px 0 0 4px;
+            
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::after {
+                    content: "";
+                    background-image: url('../assets/ico/log-out.svg');
+                
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            strong {
+                flex: 1;
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+
+    main {
+    
+        width: 600px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        > h2 {
+            font-size: 40px;
+            margin: 70px 0 8px;
+
+            color: $base-color;
+
+        }
+
+        > h3 {
+            font-size: 26px;
+            color: $base-color;
+            margin-bottom: 5px;
+        }
+
+        .numbers {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgba(0, 0, 0, .6);
+            border-radius: 10px;
+            height: 60px;
+            width: 500;
+            padding: 0 20px;
+            margin-bottom: 5px;
+
+            .person {
+                // background-color: red;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h3, small {
+                    color: $base-color;
+                }
+
+            }
+
+            .phone {
+                // background-color: red;
+                width: 30%;
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    color: $base-color;
+
+                    span {
+                        
+                        width: 20px;
+                        height: 20px;
+                        
+                        border-radius: 4px 0 0 4px;
+                        
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+            
+                        &::after {
+                            content: "";
+                            background-image: url('../assets/ico/phone.svg');
+                            
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+                }
+            }
+
+            .wpp {
+
+                a {
+                    color: #00a4b0;
+                }
+            }
+        }
+    }
+}
+
+header a, main > a {
+
+    background-color: var(--background-button);
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+}
+
+header a:hover, main > a:hover {
+    background-color: var(--background-button-hover);
+}

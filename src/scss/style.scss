@@ -1,0 +1,127 @@
+.login, .register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+    h1 {
+        font-weight: 300;
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+
+            a {
+                color: green;
+            }
+        }
+    
+        label {
+            display:flex;
+            align-items: center;
+            justify-items: center;
+            height: 100%;
+    
+            &::before {
+                content: "";
+                position: absolute;
+                margin-left: 11.5px;
+                width: 20px;
+                height: 20px;
+            }
+
+            &#user::before {
+                background: url('../assets/ico/person.svg');
+            }
+    
+            &#email::before {
+                background: url('../assets/ico/email.svg');
+            }
+    
+            &#password::before {
+                background: url('../assets/ico/lock.svg');
+            }
+
+            &#phone::before {
+                background: url('../assets/ico/phone.svg');
+            }
+        }
+    
+        input {
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            outline: none;
+            padding: 10px 37.5px;
+            background: var(--background-input);
+    
+            color: rgba(0, 0, 0, 0.6);
+    
+            width: 300px;
+            height: 40px;
+            margin: 5px 0;
+    
+            &::placeholder {
+                color: var(--placeholder);
+            }
+        }
+    
+        button {
+            width: 300px;
+            height: 40px;
+    
+            margin-top: 5px;
+    
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            outline: none;
+    
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+    
+            color: rgba(0, 0, 0, 0.6);
+    
+            transition: border 1s,background 1s, color 2s;
+    
+            &:hover {
+                border: none;
+                background: var(--background-button-hover);
+                color: white;
+
+                transition: border 1s, background 1s, color 0.7s;
+            }
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body > a {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: .5;
+
+    transition: .3s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
